@@ -1,6 +1,7 @@
 package com.capgemini.wsb.dto;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public class PatientTO {
@@ -11,7 +12,7 @@ public class PatientTO {
     private String telephoneNumber;
     private String email;
     private String patientNumber;
-    private LocalDate dateOfBirth;
+    private Date dateOfBirth;
     private LocalDate dateOfRegistration; // Nowe pole innego typu niż String
     private List<VisitTO> visits; // Lista wizyt
 
@@ -40,7 +41,7 @@ public class PatientTO {
         return patientNumber;
     }
 
-    public LocalDate getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -77,7 +78,7 @@ public class PatientTO {
         this.patientNumber = patientNumber;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

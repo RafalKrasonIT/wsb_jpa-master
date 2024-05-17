@@ -24,7 +24,7 @@ public class PatientMapper {
         // Mapowanie listy wizyt
         if (patientEntity.getVisits() != null) {
             patientTO.setVisits(patientEntity.getVisits().stream()
-                    .map(VisitMapper::mapToTO) // Upewnij się, że VisitMapper ma metodę mapToTO
+                    .map(VisitMapper::mapToTO) //VisitMapper ma metodę mapToTO
                     .collect(Collectors.toList()));
         }
         return patientTO;
@@ -44,7 +44,6 @@ public class PatientMapper {
         patientEntity.setPatientNumber(patientTO.getPatientNumber());
         patientEntity.setDateOfBirth(patientTO.getDateOfBirth());
         patientEntity.setDateOfRegistration(patientTO.getDateOfRegistration());
-        // Lista wizyt jest zazwyczaj mapowana w inny sposób, zależny od kontekstu
         return patientEntity;
     }
 

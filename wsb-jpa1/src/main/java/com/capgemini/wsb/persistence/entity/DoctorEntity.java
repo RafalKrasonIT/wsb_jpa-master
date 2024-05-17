@@ -41,7 +41,7 @@ public class DoctorEntity {
 
     }
 
-    // Getters and setters dla 'visits'
+    // Gettery i settery
 	public Set<VisitEntity> getVisits() {
 		return visits;
 	}

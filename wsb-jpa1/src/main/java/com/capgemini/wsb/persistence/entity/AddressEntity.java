@@ -25,7 +25,7 @@ public class AddressEntity {
 	@OneToOne(mappedBy = "address")
 	private PatientEntity patients;
 
-	// Getters i setters dla 'patients'
+	// Gettery i setery
 	public Set<PatientEntity> getPatients() {
 		return Collections.singleton(patients);
 	}

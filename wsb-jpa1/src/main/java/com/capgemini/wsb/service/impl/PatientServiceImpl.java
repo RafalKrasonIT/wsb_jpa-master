@@ -37,10 +37,8 @@ public class PatientServiceImpl implements PatientService {
     @Override
     public PatientTO updatePatient(PatientTO patientTO) {
         PatientEntity patient = patientDao.findById(patientTO.getId()).orElseThrow(() -> new EntityNotFoundException("Patient not found"));
-        // Update fields
         patient.setFirstName(patientTO.getFirstName());
         patient.setLastName(patientTO.getLastName());
-        // More fields to update as necessary
         patient = patientDao.save(patient);
         return PatientMapper.toTO(patient);
     }

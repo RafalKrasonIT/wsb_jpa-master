@@ -1,6 +1,7 @@
 package com.capgemini.wsb.persistence.entity;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -28,14 +29,14 @@ public class PatientEntity {
 	private String patientNumber;
 
 	@Column(nullable = false)
-	private LocalDate dateOfBirth;
+	private Date dateOfBirth;
 
 	@OneToMany(mappedBy = "patient", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<VisitEntity> visits; // Lista wizyt
 
 
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "address_id") //
+	@JoinColumn(name = "address_id")
 	private AddressEntity address;
 
 
@@ -115,11 +116,11 @@ public class PatientEntity {
 		this.patientNumber = patientNumber;
 	}
 
-	public LocalDate getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(LocalDate dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 

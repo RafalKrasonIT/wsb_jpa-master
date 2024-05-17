@@ -14,7 +14,6 @@ public class DoctorMapper {
         doctorTO.setLastName(doctorEntity.getLastName());
         doctorTO.setEmail(doctorEntity.getEmail());
         doctorTO.setDoctorNumber(doctorEntity.getDoctorNumber());
-        // Przekształć enum na String
         doctorTO.setSpecialization(doctorEntity.getSpecialization().toString());
         return doctorTO;
     }

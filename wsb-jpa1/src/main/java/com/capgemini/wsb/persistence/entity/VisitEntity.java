@@ -30,7 +30,7 @@ public class VisitEntity {
 	@OneToMany(mappedBy = "visit", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<MedicalTreatmentEntity> medicalTreatments;
 
-	// Getery i setery dla nowych relacji
+	// Getery i setery
 	public DoctorEntity getDoctor() {
 		return doctor;
 	}

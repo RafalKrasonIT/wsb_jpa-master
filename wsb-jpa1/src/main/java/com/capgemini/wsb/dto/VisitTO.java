@@ -12,16 +12,14 @@ public class VisitTO {
     private LocalDateTime time;
     private DoctorTO doctor;
     private PatientTO patient;
-    // Załóżmy, że każda wizyta może mieć kilka zabiegów medycznych
+
+    // Zakładamy, że każda wizyta może mieć kilka zabiegów medycznych
     private List<MedicalTreatmentEntity> medicalTreatments;
 
-    // Konstruktory, gettery i settery
 
     public VisitTO() {
-        // Domyślny konstruktor
-    }
 
-    // Konstruktor z wszystkimi polami, jeśli to konieczne
+    }
 
     // Gettery i settery
     public Long getId() {
@@ -72,5 +70,4 @@ public class VisitTO {
         this.medicalTreatments = medicalTreatments;
     }
 
-    // Możesz też dodać metody toString, equals, hashCode, jeśli będą potrzebne.
 }
